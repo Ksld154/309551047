@@ -6,6 +6,8 @@
 * Student:  309551047 林亮穎
 
 ## Success
+![](/img/travis_success.png)
+![](/img/travis_success2.png)
 
 ## Failure
 ![](/img/travis_fail.png)
