@@ -7,5 +7,6 @@
 
 ## Success
 
-
 ## Failure
+![](/img/travis_fail.png)
+![](/img/travis_fail2.png)
