@@ -7,8 +7,7 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 class PriorityQueueTest {
@@ -16,11 +15,11 @@ class PriorityQueueTest {
 
 //        TODO: return Stream;
         return Stream.of(
-            Arguments.of(new int[]{4, 2, 6}, new int[]{2, 4, 6}),
-            Arguments.of(new int[]{5, 4, 2, 3}, new int[]{2, 3, 4, 5}),
-            Arguments.of(new int[]{-2, 100, 21, 57}, new int[]{-2, 21, 57, 100}),
-            Arguments.of(new int[]{-5, -9, 12, 0, 2}, new int[]{-9, -5, 0, 2, 12}),
-            Arguments.of(new int[]{-3, 1, 11, 0, 9, 3}, new int[]{-3, 0, 1, 3, 9, 11})
+            Arguments.of(new int[]{4, 2, 6}, new int[]{-2, 4, 6}),
+            Arguments.of(new int[]{5, 4, 2, 3}, new int[]{-2, 3, 4, 5}),
+            Arguments.of(new int[]{-2, 100, 21, 57}, new int[]{2, 21, 57, 100}),
+            Arguments.of(new int[]{-5, -9, 12, 0, 2}, new int[]{9, -5, 0, 2, 12}),
+            Arguments.of(new int[]{-3, 1, 11, 0, 9, 3}, new int[]{3, 0, 1, 3, 9, 11})
         );
     }
 
@@ -40,6 +39,7 @@ class PriorityQueueTest {
         for (int i = 0; i < random_array.length; i++) {
             result[i] = pq.poll();
         }
+        assertEquals(random_array, result);
     }
 
 
